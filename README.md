@@ -12,7 +12,7 @@ This project is build with Flutter technology.
 Download or clone this repo by using the link below:
 
 ```
-https://github.com/MahmoudMasab/maknoon.git
+https://github.com/nomowsoft/maknoon-app.git
 ```
 
 **Step 2:**
