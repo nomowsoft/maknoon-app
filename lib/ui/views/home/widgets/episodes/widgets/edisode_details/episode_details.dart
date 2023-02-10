@@ -9,7 +9,7 @@ import 'package:maknoon/model/core/shared/status_and_types.dart';
 import 'package:maknoon/ui/shared/utils/custom_dailogs.dart';
 import 'package:maknoon/ui/shared/utils/waitting_dialog.dart';
 import 'package:maknoon/ui/shared/widgets/buttons/custom_list_button_underlined.dart';
-import 'package:maknoon/ui/shared/widgets/color_loader/color_loader.dart'; 
+import 'package:maknoon/ui/shared/widgets/color_loader/color_loader.dart';
 import 'widgets/behaviours_tab/behaviours.dart';
 import 'widgets/educational_plan_tab/educational_plan.dart';
 import 'widgets/follow_up_tab.dart/follow_up.dart';
@@ -48,10 +48,10 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
     HomeController homeController = Get.find<HomeController>();
     homeController.initStudntData();
     homeController.loadStudentsOfEpisode(widget.episode.id.toString(),
-        isInit: true); 
-    Future.delayed(const Duration(seconds: 2),(){
+        isInit: true);
+    Future.delayed(const Duration(seconds: 2), () {
       homeController.checkStudents(widget.episode.id);
-    });    
+    });
   }
 
   @override
@@ -144,8 +144,7 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
                             ),
                             Expanded(
                                 child: ListView.separated(
-                                    itemBuilder: (_, index) => 
-                                    InkWell(
+                                    itemBuilder: (_, index) => InkWell(
                                           onTap: () {
                                             setState(() {
                                               selectIndex = index;
@@ -447,7 +446,7 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                     homeController
+                                                      homeController
                                                           .listStudentsOfEpisode[
                                                               selectIndex]
                                                           .state
@@ -457,7 +456,7 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
                                                           fontSize: 14.sp,
                                                           fontWeight:
                                                               FontWeight.w500),
-                                                       maxLines: 1,       
+                                                      maxLines: 1,
                                                       textScaleFactor:
                                                           SizeConfig
                                                               .textScaleFactor,
@@ -487,15 +486,17 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
                                                               decoration:
                                                                   TextDecoration
                                                                       .none,
-                                                              color: Colors.black,
+                                                              color:
+                                                                  Colors.black,
                                                               fontWeight:
-                                                                  FontWeight.w500),
+                                                                  FontWeight
+                                                                      .w500),
                                                           textScaleFactor:
                                                               SizeConfig
                                                                   .textScaleFactor,
                                                         ),
                                                       ),
-                                                     // Divider(height: 20.h,thickness: 1.5,)
+                                                      // Divider(height: 20.h,thickness: 1.5,)
                                                     ],
                                                   ),
                                                 ),
@@ -585,7 +586,7 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
                                           planId: homeController
                                               .listStudentsOfEpisode[
                                                   selectIndex]
-                                              .planId!,   
+                                              .planId!,
                                           id: homeController
                                               .listStudentsOfEpisode[
                                                   selectIndex]
@@ -596,8 +597,7 @@ class _EpisodeDetailsState extends State<EpisodeDetails> {
                                               studentOfEpisode: homeController
                                                       .listStudentsOfEpisode[
                                                   selectIndex],
-                                                 selectIndex:selectIndex 
-                                            )
+                                              selectIndex: selectIndex)
                                           : indextab == 2
                                               ? EducationalPlan(
                                                   episode: widget.episode,

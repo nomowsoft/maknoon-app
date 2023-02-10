@@ -12,7 +12,7 @@ import 'package:maknoon/model/core/shared/status_and_types.dart';
 import 'package:maknoon/ui/shared/utils/custom_dailogs.dart';
 import 'package:maknoon/ui/shared/utils/waitting_dialog.dart';
 import 'package:maknoon/ui/shared/widgets/color_loader/color_loader.dart';
-import 'package:maknoon/ui/views/home/widgets/episodes/widgets/edisode_details/widgets/follow_up_tab.dart/widgets/add_note.dart';
+import 'widgets/add_note.dart';
 import 'widgets/quran.dart';
 import 'widgets/select_aya.dart';
 import 'widgets/select_surah.dart';
@@ -45,7 +45,7 @@ class _FollowUpState extends State<FollowUp> {
       homeController.loadPlanLines(
           widget.episode.id.toString(), widget.studentId.toString(),
           isInit: true);
-      // homeController.getStudentStateToDayLocal(widget.planId);    
+      // homeController.getStudentStateToDayLocal(widget.planId);
     }
   }
 
@@ -279,7 +279,6 @@ class _FollowUpState extends State<FollowUp> {
                                                                     ?.listen
                                                                     ?.fromSuraName !=
                                                                 sura.name) {
-                                                          
                                                           // if (homeController
                                                           //         .planLines
                                                           //         ?.listen
@@ -319,12 +318,12 @@ class _FollowUpState extends State<FollowUp> {
                                                           //     }
                                                           //   }
                                                           // } else {
-                                                            homeController
-                                                                .changeFromSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .listen);
-                                                         // }
+                                                          homeController
+                                                              .changeFromSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .listen);
+                                                          // }
                                                         }
                                                       },
                                                       child: Container(
@@ -401,7 +400,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -445,10 +444,10 @@ class _FollowUpState extends State<FollowUp> {
                                                           //               .tr);
                                                           // }
                                                           homeController
-                                                                .changeToSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .listen);
+                                                              .changeToSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .listen);
                                                         }
                                                       },
                                                       child: Container(
@@ -538,20 +537,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.listen
@@ -563,17 +560,21 @@ class _FollowUpState extends State<FollowUp> {
                                                                   .planLines
                                                                   ?.listen
                                                                   ?.fromAya !=
-                                                              aya ) {
+                                                              aya) {
                                                         if ((homeController
-                                                                .planLines
-                                                                ?.listen
-                                                                ?.toSuraName
-                                                                .isNotEmpty ??
-                                                            false) && homeController
-                                                                  .planLines
-                                                                  ?.listen?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.listen?.toSuraName) {
+                                                                    .planLines
+                                                                    ?.listen
+                                                                    ?.toSuraName
+                                                                    .isNotEmpty ??
+                                                                false) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.listen
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.listen
+                                                                    ?.toSuraName) {
                                                           if (homeController
                                                                       .planLines
                                                                       ?.listen
@@ -679,20 +680,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.listen
@@ -705,20 +704,22 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.listen
                                                                   ?.toAya !=
                                                               aya) {
-                                                        if (homeController
-                                                                    .planLines
-                                                                    ?.listen
+                                                        if (homeController.planLines?.listen
                                                                     ?.fromAya !=
                                                                 null &&
                                                             aya <
                                                                 (homeController
                                                                     .planLines!
                                                                     .listen!
-                                                                    .fromAya) && homeController
-                                                                  .planLines
-                                                                  ?.listen?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.listen?.toSuraName) {
+                                                                    .fromAya) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.listen
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.listen
+                                                                    ?.toSuraName) {
                                                           CostomDailogs
                                                               .warringDialogWithGet(
                                                                   msg:
@@ -1011,7 +1012,7 @@ class _FollowUpState extends State<FollowUp> {
                                           children: [
                                             InkWell(
                                               onTap: (() async {
-                                                  await showDialog(
+                                                await showDialog(
                                                   context: context,
                                                   builder: (contextDialog) =>
                                                       AddNote(
@@ -1106,7 +1107,7 @@ class _FollowUpState extends State<FollowUp> {
                                           response.message =
                                               'error_add_listen_line'.tr;
                                         }
-                                      await CostomDailogs.snackBar(
+                                        await CostomDailogs.snackBar(
                                             response: response);
                                       },
                                       child: Container(
@@ -1301,7 +1302,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -1360,12 +1361,12 @@ class _FollowUpState extends State<FollowUp> {
                                                           //     }
                                                           //   }
                                                           // } else {
-                                                            homeController
-                                                                .changeFromSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .reviewsmall);
-                                                        //  }
+                                                          homeController
+                                                              .changeFromSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .reviewsmall);
+                                                          //  }
                                                         }
                                                       },
                                                       child: Container(
@@ -1442,7 +1443,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -1473,11 +1474,11 @@ class _FollowUpState extends State<FollowUp> {
                                                           //                 ?.reviewsmall
                                                           //                 ?.fromSuraName)
                                                           //         .surahOrder) {
-                                                            homeController
-                                                                .changeToSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .reviewsmall);
+                                                          homeController
+                                                              .changeToSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .reviewsmall);
                                                           // } else {
                                                           //   CostomDailogs
                                                           //       .warringDialogWithGet(
@@ -1573,20 +1574,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.reviewsmall
@@ -1600,15 +1599,19 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.fromAya !=
                                                               aya) {
                                                         if ((homeController
-                                                                .planLines
-                                                                ?.reviewsmall
-                                                                ?.toSuraName
-                                                                .isNotEmpty ??
-                                                            false) && homeController
-                                                                  .planLines
-                                                                  ?.reviewsmall?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.reviewsmall?.toSuraName) {
+                                                                    .planLines
+                                                                    ?.reviewsmall
+                                                                    ?.toSuraName
+                                                                    .isNotEmpty ??
+                                                                false) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.reviewsmall
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.reviewsmall
+                                                                    ?.toSuraName) {
                                                           if (homeController
                                                                       .planLines
                                                                       ?.reviewsmall
@@ -1714,20 +1717,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.reviewsmall
@@ -1740,20 +1741,22 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.reviewsmall
                                                                   ?.toAya !=
                                                               aya) {
-                                                        if (homeController
-                                                                    .planLines
-                                                                    ?.reviewsmall
+                                                        if (homeController.planLines?.reviewsmall
                                                                     ?.fromAya !=
                                                                 null &&
                                                             aya <
                                                                 (homeController
                                                                     .planLines!
                                                                     .reviewsmall!
-                                                                    .fromAya)&& homeController
-                                                                  .planLines
-                                                                  ?.reviewsmall?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.reviewsmall?.toSuraName) {
+                                                                    .fromAya) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.reviewsmall
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.reviewsmall
+                                                                    ?.toSuraName) {
                                                           CostomDailogs
                                                               .warringDialogWithGet(
                                                                   msg:
@@ -2142,7 +2145,7 @@ class _FollowUpState extends State<FollowUp> {
                                           response.message =
                                               'error_add_listen_line'.tr;
                                         }
-                                       await CostomDailogs.snackBar(
+                                        await CostomDailogs.snackBar(
                                             response: response);
                                       },
                                       child: Container(
@@ -2193,7 +2196,6 @@ class _FollowUpState extends State<FollowUp> {
                 ),
               ],
             )));
-    
   }
 
   Card reviewbig() {
@@ -2338,7 +2340,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -2397,12 +2399,12 @@ class _FollowUpState extends State<FollowUp> {
                                                           //     }
                                                           //   }
                                                           // } else {
-                                                            homeController
-                                                                .changeFromSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .reviewbig);
-                                                        //  }
+                                                          homeController
+                                                              .changeFromSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .reviewbig);
+                                                          //  }
                                                         }
                                                       },
                                                       child: Container(
@@ -2479,7 +2481,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -2510,11 +2512,11 @@ class _FollowUpState extends State<FollowUp> {
                                                           //                 ?.reviewbig
                                                           //                 ?.fromSuraName)
                                                           //         .surahOrder) {
-                                                            homeController
-                                                                .changeToSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .reviewbig);
+                                                          homeController
+                                                              .changeToSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .reviewbig);
                                                           // } else {
                                                           //   CostomDailogs
                                                           //       .warringDialogWithGet(
@@ -2610,20 +2612,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.reviewbig
@@ -2637,15 +2637,19 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.fromAya !=
                                                               aya) {
                                                         if ((homeController
-                                                                .planLines
-                                                                ?.reviewbig
-                                                                ?.toSuraName
-                                                                .isNotEmpty ??
-                                                            false) && homeController
-                                                                  .planLines
-                                                                  ?.reviewbig?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.reviewbig?.toSuraName) {
+                                                                    .planLines
+                                                                    ?.reviewbig
+                                                                    ?.toSuraName
+                                                                    .isNotEmpty ??
+                                                                false) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.reviewbig
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.reviewbig
+                                                                    ?.toSuraName) {
                                                           if (homeController
                                                                       .planLines
                                                                       ?.reviewbig
@@ -2751,20 +2755,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.reviewbig
@@ -2777,20 +2779,22 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.reviewbig
                                                                   ?.toAya !=
                                                               aya) {
-                                                        if (homeController
-                                                                    .planLines
-                                                                    ?.reviewbig
+                                                        if (homeController.planLines?.reviewbig
                                                                     ?.fromAya !=
                                                                 null &&
                                                             aya <
                                                                 (homeController
                                                                     .planLines!
                                                                     .reviewbig!
-                                                                    .fromAya) && homeController
-                                                                  .planLines
-                                                                  ?.reviewbig?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.reviewbig?.toSuraName) {
+                                                                    .fromAya) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.reviewbig
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.reviewbig
+                                                                    ?.toSuraName) {
                                                           CostomDailogs
                                                               .warringDialogWithGet(
                                                                   msg:
@@ -3084,7 +3088,7 @@ class _FollowUpState extends State<FollowUp> {
                                           children: [
                                             InkWell(
                                               onTap: (() async {
-                                                 await showDialog(
+                                                await showDialog(
                                                   context: context,
                                                   builder: (contextDialog) =>
                                                       AddNote(
@@ -3179,7 +3183,7 @@ class _FollowUpState extends State<FollowUp> {
                                           response.message =
                                               'error_add_listen_line'.tr;
                                         }
-                                       await CostomDailogs.snackBar(
+                                        await CostomDailogs.snackBar(
                                             response: response);
                                       },
                                       child: Container(
@@ -3374,7 +3378,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -3434,12 +3438,12 @@ class _FollowUpState extends State<FollowUp> {
                                                           //     }
                                                           //   }
                                                           // } else {
-                                                            homeController
-                                                                .changeFromSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .tlawa);
-                                                        //  }
+                                                          homeController
+                                                              .changeFromSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .tlawa);
+                                                          //  }
                                                         }
                                                       },
                                                       child: Container(
@@ -3516,7 +3520,7 @@ class _FollowUpState extends State<FollowUp> {
                                                             await showDialog(
                                                           context: context,
                                                           builder: (contextDialog) => AlertDialog(
-                                                             shape: const RoundedRectangleBorder(
+                                                              shape: const RoundedRectangleBorder(
                                                                   borderRadius:
                                                                       BorderRadius.all(
                                                                           Radius.circular(
@@ -3548,11 +3552,11 @@ class _FollowUpState extends State<FollowUp> {
                                                           //                 ?.tlawa
                                                           //                 ?.fromSuraName)
                                                           //         .surahOrder) {
-                                                            homeController
-                                                                .changeToSuraPlanLine(
-                                                                    sura,
-                                                                    PlanLinesType
-                                                                        .tlawa);
+                                                          homeController
+                                                              .changeToSuraPlanLine(
+                                                                  sura,
+                                                                  PlanLinesType
+                                                                      .tlawa);
                                                           // } else {
                                                           //   CostomDailogs
                                                           //       .warringDialogWithGet(
@@ -3648,20 +3652,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.tlawa
@@ -3675,15 +3677,19 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.fromAya !=
                                                               aya) {
                                                         if ((homeController
-                                                                .planLines
-                                                                ?.tlawa
-                                                                ?.toSuraName
-                                                                .isNotEmpty ??
-                                                            false) && homeController
-                                                                  .planLines
-                                                                  ?.tlawa?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.tlawa?.toSuraName) {
+                                                                    .planLines
+                                                                    ?.tlawa
+                                                                    ?.toSuraName
+                                                                    .isNotEmpty ??
+                                                                false) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.tlawa
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.tlawa
+                                                                    ?.toSuraName) {
                                                           if (homeController
                                                                       .planLines
                                                                       ?.tlawa
@@ -3789,20 +3795,18 @@ class _FollowUpState extends State<FollowUp> {
                                                           await showDialog(
                                                         context: context,
                                                         builder: (contextDialog) => AlertDialog(
-                                                           shape: const RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius.all(
-                                                                          Radius.circular(
-                                                                              15.0))),
-                                                              contentPadding:
-                                                                  const EdgeInsets
-                                                                      .all(15),
+                                                            shape: const RoundedRectangleBorder(
+                                                                borderRadius: BorderRadius.all(
+                                                                    Radius.circular(
+                                                                        15.0))),
+                                                            contentPadding:
+                                                                const EdgeInsets.all(
+                                                                    15),
                                                             content: SelectAya(
                                                                 surahId: Constants
                                                                     .listSurah
                                                                     .firstWhere((element) =>
-                                                                        element
-                                                                            .name ==
+                                                                        element.name ==
                                                                         homeController
                                                                             .planLines
                                                                             ?.tlawa
@@ -3815,20 +3819,22 @@ class _FollowUpState extends State<FollowUp> {
                                                                   ?.tlawa
                                                                   ?.toAya !=
                                                               aya) {
-                                                        if (homeController
-                                                                    .planLines
-                                                                    ?.tlawa
+                                                        if (homeController.planLines?.tlawa
                                                                     ?.fromAya !=
                                                                 null &&
                                                             aya <
                                                                 (homeController
                                                                     .planLines!
                                                                     .tlawa!
-                                                                    .fromAya) && homeController
-                                                                  .planLines
-                                                                  ?.tlawa?.fromSuraName == homeController
-                                                                  .planLines
-                                                                  ?.tlawa?.toSuraName) {
+                                                                    .fromAya) &&
+                                                            homeController
+                                                                    .planLines
+                                                                    ?.tlawa
+                                                                    ?.fromSuraName ==
+                                                                homeController
+                                                                    .planLines
+                                                                    ?.tlawa
+                                                                    ?.toSuraName) {
                                                           CostomDailogs
                                                               .warringDialogWithGet(
                                                                   msg:
@@ -4121,11 +4127,11 @@ class _FollowUpState extends State<FollowUp> {
                                           children: [
                                             InkWell(
                                               onTap: (() async {
-                                                 await showDialog(
+                                                await showDialog(
                                                   context: context,
                                                   builder: (contextDialog) =>
                                                       AddNote(
-                                                        isTlawa:true,
+                                                          isTlawa: true,
                                                           planLine:
                                                               PlanLinesType
                                                                   .tlawa),
@@ -4217,7 +4223,7 @@ class _FollowUpState extends State<FollowUp> {
                                           response.message =
                                               'error_add_listen_line'.tr;
                                         }
-                                       await CostomDailogs.snackBar(
+                                        await CostomDailogs.snackBar(
                                             response: response);
                                       },
                                       child: Container(
