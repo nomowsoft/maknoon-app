@@ -12,7 +12,7 @@ import 'package:maknoon/model/core/shared/status_and_types.dart';
 import 'package:maknoon/ui/shared/utils/custom_dailogs.dart';
 import 'package:maknoon/ui/shared/utils/waitting_dialog.dart';
 import 'package:maknoon/ui/shared/widgets/color_loader/color_loader.dart';
-import 'package:maknoon/ui/views/home/widgets/edisode_details/widgets/follow_up.dart/widgets/add_note.dart';
+import 'package:maknoon/ui/views/home/widgets/episodes/widgets/edisode_details/widgets/follow_up_tab.dart/widgets/add_note.dart';
 import 'widgets/quran.dart';
 import 'widgets/select_aya.dart';
 import 'widgets/select_surah.dart';

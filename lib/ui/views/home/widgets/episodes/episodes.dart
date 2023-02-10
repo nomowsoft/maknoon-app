@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:maknoon/controller/home_controller.dart';
 import 'package:maknoon/model/core/shared/globals/size_config.dart';
 import 'package:maknoon/ui/shared/widgets/color_loader/color_loader.dart';
-import 'package:maknoon/ui/views/home/widgets/item_Episode.dart';
+import 'package:maknoon/ui/views/home/widgets/episodes/widgets/item_episode.dart';
 
 class Episodes extends StatefulWidget {
   const Episodes({super.key});
